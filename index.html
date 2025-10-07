@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+      body {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease 0.2s, visibility 0.2s ease 0.2s;
+      }
+
+      .loaded body {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241118115514" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="menu-open-bg"></div>
+      <header class="header">
+        <div class="header__container">
+          <div class="header__body">
+            <a href="../" class="header__logo">
+              <img src="img/logo.png" alt="Logo" />
+            </a>
+            <div class="header__menu menu">
+              <button type="button" class="menu__icon icon-menu">
+                <span></span>
+              </button>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" data-goto=".about" class="menu__link">About</a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      data-goto=".how"
+                      data-goto-top="40"
+                      class="menu__link"
+                      >How to buy</a
+                    >
+                  </li>
+                  <li class="menu__item logo">
+                    <a href="../" class="menu__link-logo">
+                      <img src="img/logo.png" alt="Logo" />
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" data-goto=".tokenomics" class="menu__link"
+                      >Tokenomics</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <a
+              href="https://dexscreener.com/bsc/0xcomingsoon"
+              target="_blank"
+              class="header__buy"
+              data-da=".menu__body, 767.68"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page__hero hero">
+          <div id="heroBg" class="hero__bg-box">
+            <div class="hero__bg">
+              <img src="img/hero/bg-2.jpg" alt="BG" />
+              <img src="img/hero/bg-2.jpg" alt="BG" />
+              <img src="img/hero/bg-2.jpg" alt="BG" />
+              <img src="img/hero/bg-2.jpg" alt="BG" />
+              <img src="img/hero/bg-2.jpg" alt="BG" />
+            </div>
+          </div>
+          <div class="hero__top top-hero">
+            <div class="top-hero__container">
+              <h1 id="heroTitle" class="top-hero__title">
+                <img src="img/hero/title.png" alt="Cricket" />
+              </h1>
+            </div>
+          </div>
+          <div class="hero__bottom bottom-hero">
+            <div class="bottom-hero__bg">
+              <div class="bottom-hero__bg-dog">
+                <img id="heroDog" src="img/hero/dog.png" alt="BG" />
+              </div>
+              <img id="heroFront" src="img/hero/front.png" alt="BG" />
+            </div>
+            <div id="heroActions" class="bottom-hero__container">
+              <div iv class="bottom-hero__left">
+                <div class="bottom-hero__social">
+                  <a
+                    href="https://x.com/wishdogbnb"
+                    target="_blank"
+                    class="bottom-hero__social-item"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="25"
+                      viewBox="0 0 28 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M21.4268 0.26416L25.5046 0.26416L16.5954 10.4315L27.077 24.2642H18.8704L12.4433 15.8736L5.08772 24.2642H1.00767L10.5374 13.3888L0.482422 0.265267L8.89739 0.265267L14.7072 7.93447L21.4268 0.26416ZM19.9962 21.828H22.2556L7.66961 2.57311H5.24507L19.9962 21.828Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://t.me/wishdog_bsc"
+                    target="_blank"
+                    class="bottom-hero__social-item"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29"
+                      height="25"
+                      viewBox="0 0 29 25"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M25.8367 0.428352C26.1797 0.282969 26.555 0.232827 26.9237 0.283145C27.2925 0.333463 27.641 0.482402 27.9332 0.714458C28.2254 0.946515 28.4504 1.25321 28.585 1.60261C28.7195 1.95201 28.7587 2.33136 28.6983 2.70116L25.5509 21.9305C25.2456 23.7854 23.225 24.8491 21.5361 23.9252C20.1234 23.1522 18.0252 21.9613 16.1378 20.7187C15.1942 20.0966 12.3035 18.1048 12.6588 16.6874C12.9641 15.4756 17.8212 10.9216 20.5966 8.21404C21.686 7.15032 21.1892 6.53669 19.9028 7.51514C16.7082 9.9445 11.5791 13.6389 9.88328 14.6788C8.3873 15.5958 7.60739 15.7523 6.67483 15.5958C4.97346 15.3106 3.3956 14.8689 2.10777 14.3308C0.367548 13.6039 0.4522 11.1941 2.10639 10.4924L25.8367 0.428352Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <a
+                  href="https://dexscreener.com/bsc/0xcomingsoon"
+                  target="_blank"
+                  class="bottom-hero__button button"
+                  >Buy Now</a
+                >
+              </div>
+              <div class="bottom-hero__right">
+                <a
+                  href="https://dexscreener.com/bsc/0xcomingsoon"
+                  target="_blank"
+                  class="bottom-hero__button button"
+                  >Chart</a
+                >
+                <a
+                  href="https://www.pnutsfreedomfarm.com/donations"
+                  target="_blank"
+                  class="bottom-hero__button button button--orange"
+                  >Donation</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__about about" data-watch="navigator">
+          <div id="aboutTop" class="about__top">
+            <img src="img/about/top.png" alt="Image" />
+          </div>
+          <div class="about__bg">
+            <img src="img/about/bg.jpg" alt="BG" />
+          </div>
+          <div
+            class="about__container"
+            data-watch-threshold="0.65"
+            data-watch-once
+            data-watch
+          >
+            <div
+              class="about__image"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <img src="img/about/01.png" alt="Image" />
+            </div>
+            <div
+              class="about__content"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <h2 class="about__title">
+                Who’s <br />
+                Cricket?
+              </h2>
+              <div class="about__text">
+                Cricket, a 14-month-old wirehaired pointer, was cast aside as
+                "worthless" in Gov. Kristi Noem’s memoir. After misbehaving,
+                Noem led her to a gravel pit and shot her, stating, “I hated
+                that dog.” On the same day, she also wounded and killed a goat
+                she disliked. Cricket’s story reflects a deeper call for
+                compassion and responsibility to those who rely on us. May her
+                memory inspire a kinder, more understanding world. Cricket,
+                forever.
+              </div>
+              <div class="about__buttons">
+                <a
+                  href="https://dexscreener.com/bsc/0xcomingsoon"
+                  target="_blank"
+                  class="about__button button"
+                  >Chart</a
+                >
+                <a
+                  href="https://www.pnutsfreedomfarm.com/donations"
+                  target="_blank"
+                  class="about__button button button--orange"
+                  >Donation</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="page__roadmap roadmap">
+          <div class="roadmap__bg">
+            <img src="img/roadmap/bg.svg" alt="BG" />
+          </div>
+          <div class="roadmap__container">
+            <div class="roadmap__left">
+              <h2 class="roadmap__title">
+                Road- <br />
+                map
+              </h2>
+              <div class="roadmap__image">
+                <img src="img/roadmap/01.png" alt="Image" />
+              </div>
+            </div>
+            <div class="roadmap__items">
+              <article class="roadmap__item">
+                <h3>
+                  <span>Phase</span>
+                  <img src="img/roadmap/d1.svg" alt="Icon" />
+                </h3>
+                <p>
+                  Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+              </article>
+              <article class="roadmap__item">
+                <h3>
+                  <span>Phase</span>
+                  <img src="img/roadmap/d2.svg" alt="Icon" />
+                </h3>
+                <p>
+                  Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+              </article>
+              <article class="roadmap__item">
+                <h3>
+                  <span>Phase</span>
+                  <img src="img/roadmap/d3.svg" alt="Icon" />
+                </h3>
+                <p>
+                  Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+              </article>
+              <article class="roadmap__item">
+                <h3>
+                  <span>Phase</span>
+                  <img src="img/roadmap/d4.svg" alt="Icon" />
+                </h3>
+                <p>
+                  Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section> -->
+        <section class="page__how how" data-watch="navigator">
+          <div class="how__container">
+            <div class="how__items">
+              <div
+                class="how__item"
+                data-watch-threshold="0.65"
+                data-watch-once
+                data-watch
+              >
+                <img src="img/how/dec.svg" alt="Decor" />
+                <h3>Create a Wallet</h3>
+                <p>
+                  Download Phantom or your preferred wallet from the App Store,
+                  Google Play, or as a Chrome extension for desktop.
+                </p>
+              </div>
+              <div
+                class="how__item how__item--main"
+                data-watch-threshold="0.65"
+                data-watch-once
+                data-watch
+              >
+                <img src="img/how/01.png" alt="How To Buy" />
+              </div>
+              <div
+                class="how__item"
+                data-watch-threshold="0.65"
+                data-watch-once
+                data-watch
+              >
+                <img src="img/how/dec.svg" alt="Decor" />
+                <h3>Get some BNB</h3>
+                <p>
+                  If you don’t have BNB, you can buy it from an exchange or
+                  perform a cross-chain swap to add it to your wallet.
+                </p>
+              </div>
+              <div
+                class="how__item"
+                data-watch-threshold="0.65"
+                data-watch-once
+                data-watch
+              >
+                <img src="img/how/dec.svg" alt="Decor" />
+                <h3>Go to Pancakeswap</h3>
+                <p>
+                  Open Pancakeswap’s website or app to access the swapping platform.
+                </p>
+              </div>
+              <div
+                class="how__item"
+                data-watch-threshold="0.65"
+                data-watch-once
+                data-watch
+              >
+                <img src="img/how/dec.svg" alt="Decor" />
+                <h3>Swap</h3>
+                <p>
+                  Select the token you want to swap, confirm the details, and
+                  complete the transaction.
+                </p>
+              </div>
+            </div>
+            <div
+              class="how__ca"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <span>0xcomingsoon</span>
+              <button class="copy-ca-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <path
+                    d="M30.375 3.9375H12.375C11.9274 3.9375 11.4982 4.11529 11.1818 4.43176C10.8653 4.74822 10.6875 5.17745 10.6875 5.625V10.6875H5.625C5.17745 10.6875 4.74822 10.8653 4.43176 11.1818C4.11529 11.4982 3.9375 11.9274 3.9375 12.375V30.375C3.9375 30.8226 4.11529 31.2518 4.43176 31.5682C4.74822 31.8847 5.17745 32.0625 5.625 32.0625H23.625C24.0726 32.0625 24.5018 31.8847 24.8182 31.5682C25.1347 31.2518 25.3125 30.8226 25.3125 30.375V25.3125H30.375C30.8226 25.3125 31.2518 25.1347 31.5682 24.8182C31.8847 24.5018 32.0625 24.0726 32.0625 23.625V5.625C32.0625 5.17745 31.8847 4.74822 31.5682 4.43176C31.2518 4.11529 30.8226 3.9375 30.375 3.9375ZM21.9375 28.6875H7.3125V14.0625H21.9375V28.6875ZM28.6875 21.9375H25.3125V12.375C25.3125 11.9274 25.1347 11.4982 24.8182 11.1818C24.5018 10.8653 24.0726 10.6875 23.625 10.6875H14.0625V7.3125H28.6875V21.9375Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="page__tokenomics tokenomics" data-watch="navigator">
+          <div class="tokenomics__container">
+            <h2
+              class="tokenomics__title"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <img src="img/tokenomics/title.png" alt="Tokenomics" />
+            </h2>
+            <div
+              class="tokenomics__body-box"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <img src="img/tokenomics/dec.png" alt="Decor" />
+              <img src="img/tokenomics/dec2.png" alt="Decor" />
+              <div class="tokenomics__body">
+                <div class="tokenomics__body-content">
+                  <div class="tokenomics__body-row">
+                    <div class="tokenomics__body-item">
+                      <h3>BINANCE</h3>
+                      <span>Blockchain</span>
+                    </div>
+                    <div class="tokenomics__body-item">
+                      <h3>LP</h3>
+                      <span>Locked</span>
+                    </div>
+                    <div class="tokenomics__body-item">
+                      <h3>0/0</h3>
+                      <span>Buy/sell tax</span>
+                    </div>
+                  </div>
+                  <div class="tokenomics__body-row">
+                    <div class="tokenomics__body-item">
+                      <h3>1 000 000 000</h3>
+                      <span>Total Supply</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="tokenomics__body-image">
+                  <img src="img/tokenomics/01.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__join join">
+          <div class="join__bg">
+            <img src="img/join/bg.jpg" alt="BG" />
+          </div>
+          <div class="join__container">
+            <h2
+              class="join__title"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <img src="img/join/title.png" alt="Join Us" />
+              <img src="img/join/01.png" alt="Image" />
+            </h2>
+            <div
+              class="join__actions"
+              data-watch-threshold="0.65"
+              data-watch-once
+              data-watch
+            >
+              <div class="join__social">
+                <a
+                  href="https://x.com/wishdogbnb"
+                  target="_blank"
+                  class="join__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="24"
+                    viewBox="0 0 28 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M21.6475 0L25.7253 0L16.8161 10.1673L27.2977 24H19.0911L12.664 15.6095L5.30842 24H1.22837L10.7581 13.1246L0.703125 0.0011064L9.1181 0.0011064L14.9279 7.67031L21.6475 0ZM20.2169 21.5638H22.4763L7.89031 2.30895H5.46577L20.2169 21.5638Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://t.me/wishdog_bsc"
+                  target="_blank"
+                  class="join__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="24"
+                    viewBox="0 0 28 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M25.0575 0.164191C25.4004 0.0188087 25.7757 -0.0313328 26.1445 0.0189852C26.5132 0.0693032 26.8617 0.218242 27.1539 0.450298C27.4461 0.682355 27.6711 0.989046 27.8057 1.33845C27.9402 1.68785 27.9794 2.0672 27.919 2.437L24.7716 21.6664C24.4663 23.5212 22.4457 24.585 20.7568 23.661C19.3441 22.888 17.2459 21.6971 15.3585 20.4545C14.4149 19.8325 11.5242 17.8406 11.8795 16.4233C12.1848 15.2114 17.0419 10.6574 19.8173 7.94988C20.9067 6.88616 20.4099 6.27253 19.1235 7.25098C15.9289 9.68034 10.7998 13.3747 9.10399 14.4147C7.608 15.3316 6.82809 15.4882 5.89553 15.3316C4.19416 15.0465 2.6163 14.6048 1.32848 14.0666C-0.411749 13.3398 -0.327097 10.93 1.32709 10.2283L25.0575 0.164191Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <a
+                href="https://dexscreener.com/bsc/0xcomingsoon"
+                target="_blank"
+                class="join__button button"
+              >
+                Buy Now
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__box">
+          <div class="footer__container">
+            <div class="footer__content">
+              <div class="footer__top">
+                <div class="footer__menu">
+                  <a href="#" data-goto=".about" class="footer__menu-item"
+                    >About</a
+                  >
+                  <a href="#" data-goto=".how" class="footer__menu-item"
+                    >HOW TO BUY</a
+                  >
+                  <a href="#" data-goto=".tokenomics" class="footer__menu-item"
+                    >TOKENOMICS</a
+                  >
+                </div>
+                <div class="footer__social">
+                  <a
+                    href="https://t.me/wishdog_bsc"
+                    target="_blank"
+                    class="footer__social-item"
+                    >Telegram</a
+                  >
+                  <a
+                    href="https://x.com/wishdogbnb"
+                    target="_blank"
+                    class="footer__social-item"
+                    >Twitter [<span>x</span>]</a
+                  >
+                </div>
+              </div>
+              <div class="footer__bottom">
+                <span>Copyright © 2025</span>
+              </div>
+            </div>
+            <div class="footer__image">
+              <img src="img/footer.png" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/app.min.js?_v=20241118115514"></script>
+    <script src="js/demo.js"></script>
+  </body>
+</html>
